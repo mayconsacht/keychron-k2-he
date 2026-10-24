@@ -13,11 +13,18 @@ Keymap export from [Keychron Launcher](https://launcher.keychron.com) for a K2 H
 | --- | --- | --- |
 | Right Shift (Layer 0) | `0x3252` = `RSFT_T(KC_UP)` | Tap → `↑`, hold → Right Shift |
 
-Settings that live outside this file (set in the Launcher):
+## Files
 
-- HE Mode → Actuation distance: **2.0 mm** on every key (Default profile).
-- HE Mode → One Key Multiple Commands: none bound. The old "Right Shift / Up" macro binding left Shift held on the host; the mod-tap keycode replaces it.
+| File | Launcher section | Contents |
+| --- | --- | --- |
+| `keymap.json` | Keymap → Export | 4 layers of keycodes |
+| `he-profile-default.json` | HE Mode → Default profile → ⋯ → Export | Actuation distance **0.4 mm** on every key, no One Key Multiple Commands bound, no Rapid Trigger |
+
+The old "Right Shift / Up" macro binding (One Key Multiple Commands) left Shift held on the host; the mod-tap keycode replaces it.
 
 ## Restore
 
-Keychron Launcher → connect the keyboard → **Keymap** → **Import** → pick `keymap.json`.
+Keychron Launcher → connect the keyboard →
+
+1. **Keymap** → **Import** → `keymap.json`
+2. **HE Mode** → **Default** profile → ⋯ → **Import** → `he-profile-default.json`
